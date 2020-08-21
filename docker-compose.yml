@@ -1,0 +1,20 @@
+version: "2"
+services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - "./conf-nginx:/etc/nginx/conf.d"
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./conf-grafana:/etc/grafana"
+    
+    
