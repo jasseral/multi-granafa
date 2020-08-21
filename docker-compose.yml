@@ -10,13 +10,13 @@ services:
     volumes:
       - "./conf-nginx:/etc/nginx/conf.d"
       - "/etc/letsencrypt/archive/graf1.nube-iiot.com/:/etc/ssl/certs"
-  # grafana:
-  #   image: grafana/grafana
-  #   container_name: grafana
-  #   restart: always
-  #   ports:
-  #     - "3000:3000"
-  #   volumes:
-  #     - "./conf-grafana:/etc/grafana"
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./conf-grafana:/etc/grafana"
     
     
