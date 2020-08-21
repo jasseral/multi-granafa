@@ -8,7 +8,7 @@ services:
       - "80:80"
     volumes:
       - "./conf-nginx:/etc/nginx/conf.d"
-      - "/etc/letsencrypt/live/graf1.nube-iiot.com:/etc/letsencrypt/live/graf1.nube-iiot.com"
+      - "/etc/letsencrypt/live/graf1.nube-iiot.com:/etc/ssl"
   grafana:
     image: grafana/grafana
     container_name: grafana
