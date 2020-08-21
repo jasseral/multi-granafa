@@ -6,8 +6,8 @@ services:
     restart: always
     ports:
       - "80:80"
-    volumes:
-      - "./conf-nginx:/etc/nginx/conf.d"
+    # volumes:
+    #   - "./conf-nginx:/etc/nginx/conf.d"
   grafana:
     image: grafana/grafana
     container_name: grafana
