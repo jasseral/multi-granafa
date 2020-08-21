@@ -6,6 +6,7 @@ services:
     restart: always
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - "./conf-nginx:/etc/nginx/conf.d"
       - "/etc/letsencrypt/archive/graf1.nube-iiot.com/:/etc/ssl/certs"
