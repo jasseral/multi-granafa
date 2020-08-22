@@ -9,7 +9,9 @@ services:
       - "443:443"
     volumes:
       - "./conf-nginx:/etc/nginx/conf.d"
+      - "./base:/usr/share/nginx/html"
       - "/etc/letsencrypt/archive/grafana.nube-iiot.com/:/etc/ssl/certs"
+      
   kfc:
     image: grafana/grafana
     container_name: kfc
