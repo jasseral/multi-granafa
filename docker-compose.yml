@@ -10,13 +10,13 @@ services:
     volumes:
       - "./conf-nginx:/etc/nginx/conf.d"
       - "/etc/letsencrypt/archive/grafana.nube-iiot.com/:/etc/ssl/certs"
-  # kfc:
-  #   image: grafana/grafana
-  #   container_name: kfc
-  #   restart: always
-  #   ports:
-  #     - "3000:3000"
-  #   volumes:
-  #     - "./conf-grafana-kfc:/etc/grafana"
+  kfc:
+    image: grafana/grafana
+    container_name: kfc
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./conf-grafana-kfc:/etc/grafana"
     
     
