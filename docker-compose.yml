@@ -9,14 +9,14 @@ services:
       - "443:443"
     volumes:
       - "./conf-nginx:/etc/nginx/conf.d"
-      - "/etc/letsencrypt/archive/graf1.nube-iiot.com/:/etc/ssl/certs"
-  grafana:
+      - "/etc/letsencrypt/archive/grafana.nube-iiot.com/:/etc/ssl/certs"
+  grafana_kfc:
     image: grafana/grafana
-    container_name: grafana
+    container_name: grafana_kfc
     restart: always
     ports:
       - "3000:3000"
     volumes:
-      - "./conf-grafana:/etc/grafana"
+      - "./conf-grafana-kfc:/etc/grafana"
     
     
